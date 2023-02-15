@@ -25,5 +25,10 @@ namespace oop
             }
         }
         public DateTime GetDateOfBirth() => dateOfBirth;
+
+        public void SayHi()
+        { 
+            Console.WriteLine($"Hi im {FirstName}, {LastName}, {GetDateOfBirth()}");
+        }
     }
 }

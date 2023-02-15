@@ -9,6 +9,8 @@ class Program
         oliwier.FirstName = "Oliwier";
         oliwier.LastName = "Giroud";
         oliwier.SetDateOfBirth(new DateTime(2002,4,4));
-        Console.WriteLine($"{oliwier.FirstName} {oliwier.LastName} {oliwier.GetDateOfBirth()}");
+        //Console.WriteLine($"{oliwier.FirstName} {oliwier.LastName} {oliwier.GetDateOfBirth()}"); wywołanie bez metody SayHi
+
+        oliwier.SayHi();
     }
 }
