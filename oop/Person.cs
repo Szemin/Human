@@ -16,15 +16,27 @@ namespace oop
         private DateTime dateOfBirth;
         private string contactNumber;
 
-        //public string ContactNumber { get; set; }    ta właściwość pozwala na uproszczony zapis tego poniżej ponieważ jedyne przypadki
-        // dla których można to wykorzystać to te które nie zawierają dodatkowej logigi i są tylko do zczytywania/nadpisywania danych
-        // lub obliczenia danych z pola prywatnego         specjalne metody zwane akcesorami
+        //public string ContactNumber { get; set; }
+        //ta właściwość pozwala na uproszczony zapis tego poniżej ponieważ jedyne przypadki
+        // dla których można to wykorzystać to te które nie zawierają dodatkowej logigi i są tylko do uzyskiwania/pobierania wartości
+        //        - specjalne metody zwane akcesorami get set
 
 
         public string ContactNumber                 // w tym przypadku można stosować logikę np sprawdzającą czy numer ma 9 cyfr
         {
             get { return contactNumber; }      // get zwraca wartość z pola number
-            set { contactNumber = value; }     // akcesor set przypisuje wartość do pola specjalnym słowem kluczowym "value"
+            set                                  // akcesor set przypisuje wartość do pola specjalnym słowem kluczowym "value"
+            {
+                if (value.Length > 9)
+                {
+                    Console.WriteLine("invalid number");
+                }
+                else
+                {
+                    contactNumber = value;
+                    Console.WriteLine("Poprawny numer");
+                }
+            }     
         }
 
         public Person(string firstName, string lastName) //konstruktor
@@ -52,7 +64,7 @@ namespace oop
         }
 
         
-        public DateTime GetDateOfBirth() => dateOfBirth;
+        public DateTime GetDateOfBirth() => dateOfBirth;     //jawne wywołanie
 
         public DateTime GetDateOfBirth2()
         {
