@@ -13,6 +13,14 @@ namespace oop
         public string LastName;
 
         private DateTime dateOfBirth;
+        private string contactNumber;
+
+        public string ContactNumber
+        {
+            get { return contactNumber; }
+            set { contactNumber = value; }
+
+        }
 
         public Person(string firstName, string lastName) //konstruktor
         {
@@ -49,7 +57,7 @@ namespace oop
 
         public void SayHi()
         { 
-            Console.WriteLine($"Hi im {FirstName}, {LastName}, {GetDateOfBirth()}");
+            Console.WriteLine($"Hi im {FirstName} {LastName} {GetDateOfBirth()}");
         }
     }
 }
