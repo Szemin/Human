@@ -7,13 +7,19 @@ using System.Threading.Tasks;
 
 namespace oop
 {
-    internal class Person
+    class Person
     {
         public string FirstName;
         public string LastName;
 
         private DateTime dateOfBirth;
 
+        public Person(string firstName, string lastName) //konstruktor
+        {
+            FirstName= firstName;
+            LastName= lastName;
+
+        }
         public void SetDateOfBirth(DateTime date)
         {
             if(date>DateTime.Now) 
