@@ -16,15 +16,15 @@ namespace oop
 
         public Person(string firstName, string lastName) //konstruktor
         {
+            Console.WriteLine("Constructor 1");
             FirstName= firstName;
             LastName= lastName;
 
         }
-        public Person(DateTime dateOfBirth, string firstName, string lastName) //konstruktor
+        public Person(DateTime dateOfBirth, string firstName, string lastName) : this(firstName,lastName) //konstruktor
         {
-            FirstName = firstName;
-            LastName = lastName;
-            SetDateOfBirth(dateOfBirth);
+            Console.WriteLine("Constructor 2");
+            SetDateOfBirth(dateOfBirth);  //wywołanie date of birth z metody SetDateOfBirth
         }
         public void SetDateOfBirth(DateTime date)
         {

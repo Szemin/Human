@@ -12,5 +12,9 @@ class Program
         //Console.WriteLine($"{oliwier.FirstName} {oliwier.LastName} {oliwier.GetDateOfBirth()}"); wywołanie bez metody SayHi
 
         oliwier.SayHi();  //wywołanie powitania z imieniem nazwiskiem i datą urodzenia bez wypisywania tego w głównej metodzie
+
+        Person pason = new Person(new DateTime(1997,1,2),"Pason","Pount");
+
+        pason.SayHi();
     }
 }
