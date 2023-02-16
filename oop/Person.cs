@@ -20,6 +20,12 @@ namespace oop
             LastName= lastName;
 
         }
+        public Person(DateTime datEOfBirth, string firstName, string lastName) //konstruktor
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            dateOfBirth = datEOfBirth;
+        }
         public void SetDateOfBirth(DateTime date)
         {
             if(date>DateTime.Now) 
