@@ -19,7 +19,7 @@ namespace oop
         {
             get { return contactNumber; }
             set { contactNumber = value; }
-
+              
         }
 
         public Person(string firstName, string lastName) //konstruktor
