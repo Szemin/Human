@@ -13,7 +13,7 @@ class Program
 
         oliwier.SayHi();  //wywołanie powitania z imieniem nazwiskiem i datą urodzenia bez wypisywania tego w głównej metodzie
 
-        Person pason = new Person(new DateTime(1997,1,2),"Pason","Pount");
+        Person pason = new Person(new DateTime(1997,1,2),"Pason","Pount"); //drugi obiekt typu person pason pount utworzony z drugiego konstruktora
 
         pason.SayHi();
     }
