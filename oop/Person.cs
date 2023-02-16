@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,11 +16,15 @@ namespace oop
         private DateTime dateOfBirth;
         private string contactNumber;
 
-        public string ContactNumber
+        //public string ContactNumber { get; set; }    ta właściwość pozwala na uproszczony zapis tego poniżej ponieważ jedyne przypadki
+        // dla których można to wykorzystać to te które nie zawierają dodatkowej logigi i są tylko do zczytywania/nadpisywania danych
+        // lub obliczenia danych z pola prywatnego         specjalne metody zwane akcesorami
+
+
+        public string ContactNumber                 // w tym przypadku można stosować logikę np sprawdzającą czy numer ma 9 cyfr
         {
-            get { return contactNumber; }
-            set { contactNumber = value; }
-              
+            get { return contactNumber; }      // get zwraca wartość z pola number
+            set { contactNumber = value; }     // akcesor set przypisuje wartość do pola specjalnym słowem kluczowym "value"
         }
 
         public Person(string firstName, string lastName) //konstruktor
