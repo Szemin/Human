@@ -20,11 +20,11 @@ namespace oop
             LastName= lastName;
 
         }
-        public Person(DateTime datEOfBirth, string firstName, string lastName) //konstruktor
+        public Person(DateTime dateOfBirth, string firstName, string lastName) //konstruktor
         {
             FirstName = firstName;
             LastName = lastName;
-            dateOfBirth = datEOfBirth;
+            SetDateOfBirth(dateOfBirth);
         }
         public void SetDateOfBirth(DateTime date)
         {
