@@ -13,13 +13,24 @@ namespace oop
         public string FirstName;
         public string LastName;
 
-        private DateTime dateOfBirth;
+        //private DateTime dateOfBirth;
         private string contactNumber;
 
         //public string ContactNumber { get; set; }
         //ta właściwość pozwala na uproszczony zapis tego poniżej ponieważ jedyne przypadki
         // dla których można to wykorzystać to te które nie zawierają dodatkowej logigi i są tylko do uzyskiwania/pobierania wartości
         //        - specjalne metody zwane akcesorami get set
+
+
+        public DateTime DateOfBirth
+        {
+            get; set;
+        }
+
+
+
+
+
 
 
         public string ContactNumber                 // w tym przypadku można stosować logikę np sprawdzającą czy numer ma 9 cyfr
@@ -34,7 +45,7 @@ namespace oop
                 else
                 {
                     contactNumber = value;
-                    Console.WriteLine("Poprawny numer");
+                    Console.WriteLine("correct number");
                 }
             }     
         }
@@ -59,16 +70,16 @@ namespace oop
             }
             else
             {
-                dateOfBirth = date;
+                DateOfBirth = date;
             }
         }
 
         
-        public DateTime GetDateOfBirth() => dateOfBirth;     //jawne wywołanie
+        public DateTime GetDateOfBirth() => DateOfBirth;     //jawne wywołanie
 
         public DateTime GetDateOfBirth2()
         {
-            return dateOfBirth;
+            return DateOfBirth;
         }
 
 

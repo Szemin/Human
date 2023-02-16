@@ -22,5 +22,11 @@ class Program
         Person pason = new Person(new DateTime(1997,1,2),"Pason","Pount"); //drugi obiekt typu person pason pount utworzony z drugiego konstruktora
 
         pason.SayHi();
+
+
+
+        oliwier.DateOfBirth = new DateTime(2002, 1, 1);
+        oliwier.SayHi(); //Console.WriteLine(oliwier.DateOfBirth); 
+
     }
 }
