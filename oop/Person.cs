@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,7 +25,15 @@ namespace oop
                 dateOfBirth = date;
             }
         }
+
+        
         public DateTime GetDateOfBirth() => dateOfBirth;
+
+        public DateTime GetDateOfBirth2()
+        {
+            return dateOfBirth;
+        }
+
 
         public void SayHi()
         { 
