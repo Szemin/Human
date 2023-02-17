@@ -16,23 +16,17 @@ namespace oop
         //private DateTime dateOfBirth;
         private string contactNumber;
 
+        public static int Count = 0;
+
         //public string ContactNumber { get; set; }
         //ta właściwość pozwala na uproszczony zapis tego poniżej ponieważ jedyne przypadki
         // dla których można to wykorzystać to te które nie zawierają dodatkowej logigi i są tylko do uzyskiwania/pobierania wartości
         //        - specjalne metody zwane akcesorami get set
 
-
         public DateTime DateOfBirth
         {
             get; set;
         }
-
-
-
-
-
-
-
         public string ContactNumber                 // w tym przypadku można stosować logikę np sprawdzającą czy numer ma 9 cyfr
         {
             get { return contactNumber; }      // get zwraca wartość z pola number
@@ -49,13 +43,12 @@ namespace oop
                 }
             }     
         }
-
         public Person(string firstName, string lastName) //konstruktor
         {
             Console.WriteLine("Constructor 1");
             FirstName= firstName;
             LastName= lastName;
-
+            Count++;                                    //zwiekszenie o 1 czyli zczytanie ile jest obiektów typu Person
         }
         public Person(DateTime dateOfBirth, string firstName, string lastName) : this(firstName,lastName) //konstruktor
         {
@@ -72,16 +65,13 @@ namespace oop
             {
                 DateOfBirth = date;
             }
-        }
-
-        
+        }    
         public DateTime GetDateOfBirth() => DateOfBirth;     //jawne wywołanie
 
         public DateTime GetDateOfBirth2()
         {
             return DateOfBirth;
         }
-
 
         public void SayHi()
         { 

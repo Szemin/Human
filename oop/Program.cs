@@ -28,5 +28,7 @@ class Program
         oliwier.DateOfBirth = new DateTime(2002, 1, 1);
         oliwier.SayHi(); //Console.WriteLine(oliwier.DateOfBirth); 
 
+        Console.WriteLine($"Object of Person type count: {Person.Count}");
+
     }
 }
