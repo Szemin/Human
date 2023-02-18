@@ -15,7 +15,7 @@ class Program
 
 
 
-        oliwier.ContactNumber = "997420997";      // uproszczone pozyskanie danych 
+        oliwier.ContactNumber = "997420997";      // uproszczone pozyskanie danych  
 
         Console.WriteLine(oliwier.ContactNumber);
 
