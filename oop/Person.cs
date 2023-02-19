@@ -32,7 +32,7 @@ namespace oop
             get { return contactNumber; }      // get zwraca wartość z pola number
             set                                  // akcesor set przypisuje wartość do pola specjalnym słowem kluczowym "value"
             {
-                if (value.Length > 9)
+                if (value.Length > 9)               //sprawdzanie czy długość numeru przekracza9 znaków
                 {
                     Console.WriteLine("invalid number");
                 }
